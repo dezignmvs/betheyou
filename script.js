@@ -13,15 +13,19 @@
 // ==========================================================================
 const CONFIG = {
   brand: {
-    name: 'BeTheYou',
+    name: 'BETheYOU',
     tagline: 'BE. BUILD. BECOME.',
-    founder: 'Jishad Musthafa'
+    founder: 'Jishad Musthafa',
+    summary: 'A learning, coaching and development platform helping people become more confident, capable and impactful.'
   },
   contact: {
     email: 'contact@betheyou.com',
+    phone: '+91 96561 41881',
+    whatsapp: 'https://wa.me/919656141881',
     location: 'Cochin, India & Worldwide Virtual'
   },
   socials: {
+    whatsapp: 'https://wa.me/919656141881',
     linkedin: 'https://linkedin.com',
     youtube: 'https://youtube.com',
     instagram: 'https://instagram.com'
@@ -34,60 +38,66 @@ const CONFIG = {
 
 // ==========================================================================
 // 2. Program Data Repository
-// Strictly matches the provided source material without fabricated curricula.
+// Strictly matches the provided source material from the PDF document.
 // ==========================================================================
 const PROGRAMS_DATA = {
   'be-confident': {
     title: 'BE CONFIDENT',
-    badge: 'Personal Effectiveness',
+    badge: 'Personal Growth',
     headline: 'Build the confidence to show up, speak up and step forward.',
     description: 'Confidence, personal effectiveness and self-development experiences designed to help you become more comfortable with yourself and your abilities.',
-    focusArea: 'Self-awareness, executive presence, overcoming hesitation, daily confidence habits, and authentic self-expression.',
+    focusArea: 'Confidence, personal effectiveness, and self-development experiences.',
+    ctaText: 'Explore →',
     inquiryVal: 'Be Confident',
     defaultAudience: 'Individual'
   },
   'be-heard': {
     title: 'BE HEARD',
-    badge: 'Communication Mastery',
+    badge: 'Communication',
     headline: 'Find your voice. Express your ideas. Make an impact.',
     description: 'Develop communication, public speaking, presentation, and professional expression through practical learning and guided practice.',
-    focusArea: 'Idea structuring, conversational clarity, presentation confidence, voice modulation, and audience connection.',
+    focusArea: 'Communication, public speaking, presentation, and professional expression through practical learning and guided practice.',
+    ctaText: 'Explore →',
     inquiryVal: 'Be Heard',
     defaultAudience: 'Individual'
   },
   'be-leader': {
     title: 'BE A LEADER',
-    badge: 'Leadership & Influence',
+    badge: 'Leadership',
     headline: 'Lead yourself. Lead others. Create an impact.',
     description: 'Build the mindset, communication and people skills required to lead with clarity, confidence and responsibility.',
-    focusArea: 'Self-leadership principles, empathetic listening, guiding team dialogue, accountability, and decision clarity.',
+    focusArea: 'Mindset, communication, and people skills required to lead with clarity, confidence, and responsibility.',
+    ctaText: 'Explore →',
     inquiryVal: 'Be a Leader',
     defaultAudience: 'Individual'
   },
   'be-future-ready': {
     title: 'BE FUTURE-READY',
-    badge: 'Digital & Human Capabilities',
+    badge: 'Future Skills',
     headline: 'Learn to work with what comes next.',
     description: 'Develop practical AI awareness, digital capabilities, and future-focused skills while strengthening the human abilities that remain essential.',
-    focusArea: 'Practical AI tools literacy, adaptability, critical thinking, ethical tech awareness, and irreplaceable human skills.',
+    focusArea: 'Practical AI awareness, digital capabilities, and future-focused skills while strengthening essential human abilities.',
+    ctaText: 'Explore →',
     inquiryVal: 'Be Future-Ready',
     defaultAudience: 'Individual'
   },
   'be-your-best': {
     title: 'BE YOUR BEST',
-    badge: 'Personal Mastery & Coaching',
+    badge: 'Personal Mastery',
     headline: 'Growth begins within.',
     description: 'Personal mastery, coaching and development experiences designed to help you build self-awareness, discipline, clarity and personal effectiveness.',
-    focusArea: 'One-on-one guided reflection, personal habits, priority clarification, and continuous self-improvement framework.',
+    focusArea: 'Personal mastery, coaching, and development experiences designed to build self-awareness, discipline, clarity, and personal effectiveness.',
+    ctaText: 'Explore →',
     inquiryVal: 'Be Your Best',
     defaultAudience: 'Individual'
   },
   'build-better-teams': {
     title: 'BUILD BETTER TEAMS',
-    badge: 'Organizational Learning',
+    badge: 'Corporate Learning',
     headline: 'Stronger people. Stronger teams. Stronger organizations.',
     description: 'Practical corporate learning experiences focused on communication, confidence, leadership, teamwork, and performance.',
-    focusArea: 'Team alignment workshops, constructive communication channels, cross-functional trust, and collaborative performance.',
+    focusArea: 'Practical corporate learning experiences focused on communication, confidence, leadership, teamwork, and performance.',
+    ctaText: 'Explore Corporate Solutions →',
     inquiryVal: 'Build Better Teams',
     defaultAudience: 'Organization'
   }

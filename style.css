@@ -404,6 +404,26 @@ p {
   color: #FFFFFF;
 }
 
+/* WhatsApp Accent Action Button */
+.btn-whatsapp {
+  background-color: #25D366;
+  color: #FFFFFF;
+  border: 1px solid #20BA5A;
+  box-shadow: 0 2px 8px rgba(37, 211, 102, 0.25);
+}
+
+.btn-whatsapp:hover {
+  background-color: #20BA5A;
+  border-color: #1DA851;
+  color: #FFFFFF;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+}
+
+.btn-whatsapp:active {
+  transform: translateY(0);
+}
+
 /* Sleek Arrow Action Link */
 .btn-arrow {
   display: inline-flex;
@@ -1788,17 +1808,31 @@ p {
   background: linear-gradient(to right, var(--color-brand-terracotta), var(--color-brand-bronze), var(--color-brand-sage));
 }
 
+.cta-intro-phrase {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  color: var(--color-text-secondary);
+  margin-bottom: 1.1rem;
+}
+
 .cta-steps {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0.65rem;
   flex-wrap: wrap;
   font-family: var(--font-mono);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 500;
   color: var(--color-text-muted);
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-step-bullet {
+  color: var(--color-brand-terracotta);
+  user-select: none;
+  font-weight: bold;
 }
 
 .cta-main-statement {
@@ -1815,6 +1849,15 @@ p {
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
+}
+
+.footer-audiences-sub {
+  font-size: 0.825rem;
+  font-family: var(--font-mono);
+  color: var(--color-brand-sage);
+  margin-top: 0.6rem;
+  line-height: 1.5;
+  font-weight: 500;
 }
 
 /* --------------------------------------------------------------------------
@@ -1964,6 +2007,12 @@ p {
   transform: translateY(-2px);
 }
 
+.social-icon-link.social-icon-whatsapp:hover {
+  border-color: #25D366;
+  color: #25D366;
+  background-color: rgba(37, 211, 102, 0.08);
+}
+
 /* --------------------------------------------------------------------------
    18. Modals (Program Detail, Inquiry, Founder Bio)
    -------------------------------------------------------------------------- */
@@ -2099,6 +2148,45 @@ p {
 /* --------------------------------------------------------------------------
    19. Inquiry Form Styles
    -------------------------------------------------------------------------- */
+.inquiry-whatsapp-prompt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.85rem 1.15rem;
+  background: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-btn);
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.inquiry-whatsapp-label {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.inquiry-whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1A9E4C;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.inquiry-whatsapp-btn i {
+  font-size: 1.1rem;
+}
+
+.inquiry-whatsapp-btn:hover {
+  color: #128C7E;
+  transform: translateX(2px);
+}
+
 .inquiry-form {
   display: flex;
   flex-direction: column;
@@ -2243,6 +2331,81 @@ p {
   border-color: var(--color-brand-terracotta);
   color: var(--color-brand-terracotta);
   transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   20B. Floating WhatsApp Button
+   -------------------------------------------------------------------------- */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  z-index: 990;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.7rem 1.2rem 0.7rem 1rem;
+  background-color: #25D366;
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 4px 18px rgba(37, 211, 102, 0.38), 0 2px 6px rgba(28, 25, 23, 0.1);
+  transition: all var(--transition-fast);
+}
+
+.floating-whatsapp i {
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.floating-whatsapp:hover {
+  background-color: #20BA5A;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.48), 0 3px 8px rgba(28, 25, 23, 0.15);
+}
+
+.floating-whatsapp-pulse {
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  border: 2px solid #25D366;
+  opacity: 0.7;
+  animation: whatsappPulse 2.4s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+  pointer-events: none;
+}
+
+@keyframes whatsappPulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  60% {
+    transform: scale(1.18);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.22);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .floating-whatsapp {
+    bottom: 1.25rem;
+    left: 1.25rem;
+    padding: 0;
+    width: 48px;
+    height: 48px;
+    justify-content: center;
+    border-radius: var(--radius-pill);
+  }
+  .floating-whatsapp-text {
+    display: none;
+  }
 }
 
 /* --------------------------------------------------------------------------
