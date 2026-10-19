@@ -621,6 +621,14 @@ function initProgramFilters() {
       btn.setAttribute('aria-selected', 'true');
 
       const filterVal = btn.getAttribute('data-filter');
+      const gridContainer = document.getElementById('programs-grid');
+      if (gridContainer) {
+        if (filterVal === 'all') {
+          gridContainer.classList.remove('is-filtered');
+        } else {
+          gridContainer.classList.add('is-filtered');
+        }
+      }
 
       programCards.forEach(card => {
         const cardCategory = card.getAttribute('data-category');
